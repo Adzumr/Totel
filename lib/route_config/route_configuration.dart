@@ -3,7 +3,7 @@ import 'package:totel/views/onboarding_screens/login_screen.dart';
 
 import '../views/onboarding_screens/signup_screen.dart';
 import '../views/onboarding_screens/welcome_screen.dart';
-import '../views/partner_UIs/partner_home_screen.dart';
+import '../views/partner_views/partner_home_screen.dart';
 import 'route_names.dart';
 
 class AppRoutesConfiguration {

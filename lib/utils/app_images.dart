@@ -8,4 +8,10 @@ class AppImages {
 // App Icons
   static const icon404 = "assets/icon404.png";
   static const googleLogo = "assets/google_logo.png";
+  static const checkIcon = "assets/check_icon.png";
+
+  // Users images
+  static const String userOne = 'assets/user_one.png';
+  static const String userTwo = 'assets/user_two.png';
+  static const String userThree = 'assets/user_three.png';
 }
