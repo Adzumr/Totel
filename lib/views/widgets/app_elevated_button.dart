@@ -9,11 +9,13 @@ class AppElevatedButton extends StatelessWidget {
     this.backgroundColor,
     this.foregroundColor,
     this.padding,
-    required this.text,
+    this.child,
+    this.text,
     super.key,
   });
   final VoidCallback? onPressed;
   final String? text;
+  final Widget? child;
   final Color? backgroundColor;
   final Color? foregroundColor;
   final EdgeInsetsGeometry? padding;
@@ -37,9 +39,10 @@ class AppElevatedButton extends StatelessWidget {
             ),
       ),
       onPressed: onPressed,
-      child: Text(
-        "$text",
-      ),
+      child: child ??
+          Text(
+            "$text",
+          ),
     );
   }
 }

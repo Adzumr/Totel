@@ -5,9 +5,10 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+import 'package:totel/utils/app_images.dart';
 import 'package:totel/views/widgets/app_text_button.dart';
 
-import '../../utils/route_config/route_names.dart';
+import '../../route_config/route_names.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_fonts.dart';
 import '../../utils/textfield_style.dart';
@@ -90,8 +91,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               hideSearch: false,
                               hideMainText: false,
                               textOverflow: TextOverflow.ellipsis,
-                              textStyle: AppFonts.smallBodyStyle,
-                              closeIcon: const Icon(Icons.phone),
+                              textStyle: AppFonts.bodyStyle,
                               showDropDownButton: true,
                               showCountryOnly: false,
                               showOnlyCountryWhenClosed: true,
@@ -107,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           (BuildContext context, dynamic value, Widget? child) {
                         return TextFormField(
                           controller: phoneNumberController,
-                          style: AppFonts.smallBodyStyle,
+                          style: AppFonts.bodyStyle,
                           maxLength: 10,
                           maxLengthEnforcement: MaxLengthEnforcement.enforced,
                           validator: (value) {
@@ -133,7 +133,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               padding: const EdgeInsets.all(15),
                               child: Text(
                                 countryCode.value,
-                                style: AppFonts.smallBodyStyle,
+                                style: AppFonts.bodyStyle,
                               ),
                             ),
                           ),
@@ -143,7 +143,9 @@ class _LoginScreenState extends State<LoginScreen> {
                     SizedBox(height: 15 * screenSize.flipped.aspectRatio),
                     AppElevatedButton(
                       text: "Continue",
-                      onPressed: () {},
+                      onPressed: () {
+                        Get.toNamed(AppRouteNames.partnerHome);
+                      },
                     ),
                   ],
                 ),
@@ -153,12 +155,44 @@ class _LoginScreenState extends State<LoginScreen> {
                     AppElevatedButton(
                       backgroundColor: AppColors.blackColor,
                       foregroundColor: AppColors.whiteColor,
-                      text: "Continue with Apple",
                       onPressed: () {},
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.apple,
+                            color: AppColors.whiteColor,
+                            size: 12 * screenSize.flipped.aspectRatio,
+                          ),
+                          const SizedBox(width: 10),
+                          Text(
+                            "Continue with Apple",
+                            style: AppFonts.bodyStyle.copyWith(
+                              color: AppColors.whiteColor,
+                            ),
+                          )
+                        ],
+                      ),
                     ),
-                    SizedBox(height: 5 * screenSize.flipped.aspectRatio),
+                    SizedBox(height: 10 * screenSize.flipped.aspectRatio),
                     AppTextButton(
                       text: "Continue with Google",
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(
+                            image: const AssetImage(AppImages.googleLogo),
+                            width: 9 * screenSize.flipped.aspectRatio,
+                          ),
+                          SizedBox(width: 10 * screenSize.flipped.aspectRatio),
+                          Text(
+                            "Continue with Apple",
+                            style: AppFonts.bodyStyle.copyWith(
+                              color: AppColors.blackColor,
+                            ),
+                          )
+                        ],
+                      ),
                       onPressed: () {},
                     ),
                   ],

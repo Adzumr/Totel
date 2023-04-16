@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
-import 'package:totel/utils/route_config/route_names.dart';
+import 'package:totel/route_config/route_names.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_fonts.dart';
 import '../../utils/helper.dart';
@@ -30,7 +30,9 @@ class WelcomeScreen extends StatelessWidget {
                   bottom: 10 * aspectRatio,
                   right: 0,
                   left: 0,
-                  child: AccessButtons(aspectRatio: aspectRatio),
+                  child: AccessButtons(
+                    aspectRatio: aspectRatio,
+                  ),
                 ),
                 Positioned(
                   top: 20 * aspectRatio,

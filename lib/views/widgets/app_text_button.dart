@@ -10,10 +10,12 @@ class AppTextButton extends StatelessWidget {
     this.backgroundColor,
     this.foregroundColor,
     this.text,
+    this.child,
     this.padding,
   });
   final VoidCallback? onPressed;
   final String? text;
+  final Widget? child;
   final Color? backgroundColor;
   final Color? foregroundColor;
   final EdgeInsetsGeometry? padding;
@@ -37,9 +39,10 @@ class AppTextButton extends StatelessWidget {
             ),
       ),
       onPressed: onPressed,
-      child: Text(
-        "$text",
-      ),
+      child: child ??
+          Text(
+            "$text",
+          ),
     );
   }
 }

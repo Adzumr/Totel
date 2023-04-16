@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/route_manager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:totel/utils/route_config/route_configuration.dart';
-import 'package:totel/utils/route_config/route_names.dart';
+import 'package:totel/route_config/route_configuration.dart';
+import 'package:totel/route_config/route_names.dart';
 
 import 'utils/app_colors.dart';
 import 'utils/app_fonts.dart';

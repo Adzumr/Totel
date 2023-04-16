@@ -7,4 +7,5 @@ class AppImages {
 
 // App Icons
   static const icon404 = "assets/icon404.png";
+  static const googleLogo = "assets/google_logo.png";
 }
