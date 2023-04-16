@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import '../route_config/route_names.dart';
+import '../utils/route_config/route_names.dart';
 import '../utils/app_colors.dart';
 import '../utils/app_fonts.dart';
 import '../utils/app_images.dart';
-import '../widgets/app_elevated_button.dart';
+import 'widgets/app_elevated_button.dart';
 
 class ErrorScreen extends StatefulWidget {
   final FlutterErrorDetails? error;

@@ -5,14 +5,14 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
-import 'package:totel/widgets/app_text_button.dart';
+import 'package:totel/views/widgets/app_text_button.dart';
 
-import '../../route_config/route_names.dart';
+import '../../utils/route_config/route_names.dart';
 import '../../utils/app_colors.dart';
 import '../../utils/app_fonts.dart';
 import '../../utils/textfield_style.dart';
-import '../../widgets/app_elevated_button.dart';
-import '../../widgets/back_button.dart';
+import '../widgets/app_elevated_button.dart';
+import '../widgets/back_button.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
