@@ -144,7 +144,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     AppElevatedButton(
                       text: "Continue",
                       onPressed: () {
-                        Get.toNamed(AppRouteNames.partnerHome);
+                        Get.toNamed(AppRouteNames.partnerNavBar);
                       },
                     ),
                   ],

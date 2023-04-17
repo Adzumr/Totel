@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:totel/utils/app_colors.dart';
 import 'package:totel/utils/app_fonts.dart';
+import 'package:totel/utils/app_images.dart';
 import 'package:totel/utils/enums.dart';
+
+import '../../utils/helper.dart';
 
 class PartnerHomeScreen extends StatefulWidget {
   const PartnerHomeScreen({super.key});
@@ -44,12 +47,97 @@ class _PartnerHomeScreenState extends State<PartnerHomeScreen> {
           SliverList(
             delegate: SliverChildBuilderDelegate(
               (BuildContext context, int index) {
-                return ListTile(
-                  contentPadding: const EdgeInsets.all(20),
-                  title: Text('Item $index'),
+                final images = HelperClass.userImages[index];
+                return Container(
+                  margin: const EdgeInsets.only(bottom: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 15.0),
+                  decoration: const BoxDecoration(
+                    color: AppColors.whiteColor,
+                  ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Image(
+                        image: AssetImage(images),
+                      ),
+                      SizedBox(height: 5 * screenSize.flipped.aspectRatio),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Row(
+                            children: [
+                              Text(
+                                "Alex Norman",
+                                style: AppFonts.titleStyle.copyWith(
+                                  fontWeight: FontWeight.w700,
+                                ),
+                              ),
+                              SizedBox(
+                                  width: 5 * screenSize.flipped.aspectRatio),
+                              Image(
+                                image: const AssetImage(
+                                  AppImages.checkIcon,
+                                ),
+                                height: 8 * screenSize.flipped.aspectRatio,
+                              ),
+                            ],
+                          ),
+                          const Icon(Icons.more_horiz)
+                        ],
+                      ),
+                      SizedBox(height: 3 * screenSize.flipped.aspectRatio),
+                      Text(
+                        "Great Western Dockyard, Gas Ferry Rd, Bristol BS1 6TY",
+                        style: AppFonts.bodyStyle.copyWith(
+                          color: AppColors.blackColor.withOpacity(0.5),
+                        ),
+                      ),
+                      SizedBox(height: 3 * screenSize.flipped.aspectRatio),
+                      Text(
+                        "Looking Places: Bristol, Bath & London",
+                        style: AppFonts.bodyStyle.copyWith(),
+                      ),
+                      Text(
+                        "Available from 20th March, 2023",
+                        style: AppFonts.bodyStyle.copyWith(
+                          color: AppColors.blackColor.withOpacity(0.5),
+                        ),
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                        children: [
+                          Text(
+                            "Budget \$650-\$800",
+                            style: AppFonts.bodyStyle.copyWith(
+                              fontSize: 16,
+                            ),
+                          ),
+                          ElevatedButton(
+                            style: TextButton.styleFrom(
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              textStyle: AppFonts.smallBodyStyle.copyWith(
+                                fontWeight: FontWeight.w700,
+                              ),
+                              foregroundColor:
+                                  AppColors.blackColor.withOpacity(.5),
+                              backgroundColor: AppColors.grayColor,
+                              elevation: 0,
+                            ),
+                            onPressed: null,
+                            child: const Text("Unavailable"),
+                          ),
+                        ],
+                      ),
+                      SizedBox(height: 3 * screenSize.flipped.aspectRatio),
+                    ],
+                  ),
                 );
               },
-              childCount: 100,
+              childCount: HelperClass.userImages.length,
             ),
           ),
         ],

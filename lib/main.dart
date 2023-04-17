@@ -43,7 +43,7 @@ class TotelApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
         iconTheme: const IconThemeData(
-          color: AppColors.indigoColor,
+          color: AppColors.blackColor,
         ),
         floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: AppColors.indigoColor,

@@ -40,6 +40,7 @@ dependencies:
   image_picker: ^0.8.7+3
   intl: ^0.18.0
   introduction_screen: ^3.1.7
+  persistent_bottom_nav_bar: ^5.0.2
   shared_preferences: ^2.1.0
   smooth_page_indicator: ^1.0.1
 

@@ -4,6 +4,7 @@ import 'package:totel/views/onboarding_screens/login_screen.dart';
 import '../views/onboarding_screens/signup_screen.dart';
 import '../views/onboarding_screens/welcome_screen.dart';
 import '../views/partner_views/partner_home_screen.dart';
+import '../views/partner_views/partner_navigation_bar.dart';
 import 'route_names.dart';
 
 class AppRoutesConfiguration {
@@ -23,6 +24,10 @@ class AppRoutesConfiguration {
     ),
 
     // Partner Screens
+    GetPage(
+      name: '/${AppRouteNames.partnerNavBar}',
+      page: () => const PartnetNavigationBar(),
+    ),
     GetPage(
       name: '/${AppRouteNames.partnerHome}',
       page: () => const PartnerHomeScreen(),

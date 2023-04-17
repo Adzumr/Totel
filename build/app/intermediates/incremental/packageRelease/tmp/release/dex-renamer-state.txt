@@ -1,0 +1,4 @@
+#Mon Apr 17 12:00:48 WAT 2023
+base.0=/Users/Adzumr/Documents/GitHub/Totel/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex
